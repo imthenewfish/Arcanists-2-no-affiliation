@@ -1,11 +1,11 @@
 require ('bin/30log-global')
-player = class("player", {x = 1, y = 1, width = 50, height = 50, speed = 1})
+Player = class("Player", {x = 1, y = 1, width = 30, height = 30, speed = 1, jumpvel = 1, fallvel = 1, time = 20})
 
-function player:draw( )
+function Player:draw( )
 love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 end
 
-function player:move()
+function Player:move()
 		if love.keyboard.isDown('w') then
 			if self.speed < 5 then
 				self.speed = self.speed + 1
@@ -36,8 +36,3 @@ function player:move()
 		end		
 end
 
-function player:jump()
-	if love.keyboard.isDown('space') == true then
-		self.y = 20
-	end
-end

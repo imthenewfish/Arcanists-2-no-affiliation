@@ -1,19 +1,20 @@
 debug = true
 require ('lib/astray')
 require ('bin/30log-global')
-require ('bin/player')
-
- 
+require ('bin/Player')
+require ('bin/Obstacle')
+require ('bin/drawTable')
+require ('bin/levels/1')
 
 function love.load(dt)
 
 end
 
 function love.update(dt)
-	player:move()
-	player:jump()
+	Player:move()
 end
 
 function love.draw(dt)
-	player:draw()
+	Player:draw()
+	drawTable(Obstacle, obstacleTable1)
 end

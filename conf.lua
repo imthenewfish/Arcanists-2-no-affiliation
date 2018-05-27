@@ -1,8 +1,7 @@
-function love.comf(t)
-		t.title = "Arc 2"
-		t.version "0.10.2"
-		t.window.width "1028"
-		t.window.height "720"
-		love.fps = 30
-		t.console = true
+function love.conf(t)
+	t.window.title = "Arcanists Two"
+	t.version = "11.0" 
+	t.window.width = 1024
+	t.window.height = 768
+	t.console = false
 end
